@@ -1,0 +1,93 @@
+Prudential Management of Climate-Related Credit Risk in Banking
+
+1. General framework and project positioning
+This project adopts the perspective of a European bank granting loans to non-financial corporations. The main objective is to assess how climate change may affect the solvency of these firms and, consequently, generate default risk for the lending bank.
+The analysis is conducted within a prudential risk management framework, aiming to anticipate potential climate-related losses in order to assess the financial resilience of the banking institution. More specifically, the bank seeks to answer the following questions:
+which economic sectors are the most exposed to climate-related risks,
+to what extent the financed companies will remain able to service their debt,
+whether the bank’s capital buffers are sufficient in the event of a severe climate crisis.
+The geographical scope of the study is deliberately limited to Europe, in order to ensure a homogeneous and coherent regulatory framework. The project is therefore positioned in the context of a European bank subject to the supervision of the European Central Bank, which is particularly relevant given that the climate stress testing exercises considered in this study are conducted within a European regulatory setting.
+
+2. Project objectives
+The objective of this project is to identify and implement, using the Python programming language, regulatory indicators designed to measure the impact of climate change on bank credit risk. These indicators are directly inspired by the climate stress tests conducted by the Autorité de contrôle prudentiel et de résolution and by the European Central Bank.
+The adopted approach consists of:
+constructing a fictitious but realistic banking loan portfolio,
+applying different climate scenarios,
+measuring the resulting changes in default risk and associated credit losses.
+
+3. Key actors in climate finance
+3.1 Banking supervisors
+European Central Bank: supervises major banks in the euro area and progressively integrates climate-related risks into its prudential requirements.
+Autorité de contrôle prudentiel et de résolution: supervises French banks and conducted a pilot climate stress test in 2020–2021.
+3.2 Climate scenario providers
+NGFS (Network for Greening the Financial System): a network of central banks producing reference climate scenarios used in regulatory stress tests.
+3.3 Reporting frameworks and methodologies
+TCFD (Task Force on Climate-related Financial Disclosures): an international framework for climate risk disclosure.
+PCAF (Partnership for Carbon Accounting Financials): a methodology for measuring financed emissions by financial institutions.
+3.4 Economic actors
+Commercial banks (which bear the credit risk),
+Borrowing firms (which are directly exposed to climate shocks).
+Insurers, governments, NGOs and ESG rating agencies are mentioned as part of the broader ecosystem, but they are not analysed in detail within the scope of this project.
+
+4. Data used
+The banking portfolio data are simulated, in order to reproduce a realistic credit portfolio while preserving the confidentiality of actual banking data. The main variables used are:
+EAD (Exposure at Default): the bank’s exposure at the time of default,
+PD (Probability of Default): the likelihood that a borrower defaults,
+LGD (Loss Given Default): the loss incurred by the bank in the event of default,
+ECL (Expected Credit Loss): expected loss, defined as
+ECL=EAD×PD×LGD
+
+The climate scenarios considered are inspired by NGFS trajectories:
+orderly transition (+2°C),
+disorderly transition,
+climate inaction scenario (Hot House World, +4°C).
+
+5. Economic sectors analysed
+The analysis focuses on several key economic sectors:
+Agriculture
+Energy
+Manufacturing
+Transport
+Construction
+Real Estate
+Utilities
+These sectors are selected due to their heterogeneous exposure to climate-related risks.
+
+6. Risk typology considered
+6.1 Credit risk (core focus)
+Credit risk constitutes the core of the analysis. It is affected by:
+an increase in firms’ probabilities of default,
+a potential increase in losses in the event of default.
+6.2 Underlying climate risks
+Physical risks: floods, droughts, wildfires, storms and heatwaves.
+Transition risks: carbon taxation, new environmental regulations, and the progressive banning of certain activities.
+6.3 Additional risks analysed indirectly
+Sectoral concentration risk,
+Extreme risk (severe losses under adverse scenarios).
+Reputational, liquidity and legal risks are acknowledged but are not modelled quantitatively.
+
+7. Project limitations
+This project is subject to several deliberate limitations:
+a geographical scope restricted to Europe,
+an exclusive focus on credit risk,
+the exclusion of investors, funds and financial markets,
+methodological simplifications in the modelling of PDs and LGDs.
+These limitations are consistent with the pedagogical objective of the project and with the scope of regulatory climate stress testing exercises.
+
+8. Methodological contribution of the project
+This project contributes at the intersection of prudential regulation, climate risk analysis, and quantitative implementation. While climate stress tests are increasingly required by European supervisors, their practical implementation remains complex and heterogeneous across institutions.
+The present work proposes a simplified but structured framework that:
+translates regulatory expectations expressed by the European Central Bank and the ACPR into operational indicators,
+relies on NGFS climate scenarios to capture both transition and physical risks,
+implements these indicators in Python, ensuring transparency and reproducibility.
+By combining a realistic simulated banking portfolio with sector-based climate shocks applied to credit risk parameters (PD and LGD), the project illustrates how climate-related risks can be integrated into traditional credit risk management tools. As such, it serves as a pedagogical bridge between regulatory discourse and quantitative risk modelling.
+
+9. Reproducibility and transparency
+A key objective of this project is to ensure reproducibility and transparency, in line with best practices in both academic research and supervisory expectations.
+All data used in the analysis are simulated, which avoids confidentiality issues while allowing full control over portfolio characteristics. The assumptions underlying the modelling of climate impacts—such as PD and LGD uplifts by sector and scenario—are explicitly documented and can be easily modified.
+The entire methodology is implemented in Python and organised in a structured manner, enabling any user to:
+reproduce the results,
+adjust scenario assumptions,
+extend the analysis to additional sectors or risk parameters.
+This approach aligns with the growing emphasis placed by supervisors on model explainability, auditability, and transparent risk assessment frameworks.
+
